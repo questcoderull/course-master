@@ -1,0 +1,91 @@
+[
+  {
+    "id": "course101",
+    "title": "Full-Stack Web Development with MERN",
+    "instructor": "John Doe",
+    "price": 49.99,
+    "category": "Web Development",
+    "tags": ["mern", "javascript", "backend", "frontend"],
+    "thumbnail": "https://i.ibb.co/02H7pS9/mern.jpg",
+    "description": "Learn full-stack web development using MongoDB, Express.js, React, and Node.js. Build complete projects from scratch.",
+    "syllabus": [
+      "Introduction to MERN",
+      "React Basics & Hooks",
+      "Node.js & Express Essentials",
+      "MongoDB CRUD Operations",
+      "Building Full Projects"
+    ],
+    "lessons": [
+      {
+        "title": "Getting Started with MERN",
+        "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+        "duration": "15:30"
+      },
+      {
+        "title": "React Components & Props",
+        "videoUrl": "https://www.youtube.com/embed/Ke90Tje7VS0",
+        "duration": "20:10"
+      }
+    ]
+  },
+
+  {
+    "id": "course102",
+    "title": "Advanced JavaScript Mastery",
+    "instructor": "Sarah Johnson",
+    "price": 29.99,
+    "category": "Programming",
+    "tags": ["javascript", "es6", "async", "dom"],
+    "thumbnail": "https://i.ibb.co/CJc7n5p/javascript.jpg",
+    "description": "Master JavaScript from the basics to advanced concepts like closures, async/await, ES6+, and DOM manipulation.",
+    "syllabus": [
+      "JavaScript Fundamentals",
+      "Functions & Scope",
+      "Async Programming",
+      "DOM Manipulation",
+      "Projects with JavaScript"
+    ],
+    "lessons": [
+      {
+        "title": "Understanding Variables & Scope",
+        "videoUrl": "https://www.youtube.com/embed/W6NZfCO5SIk",
+        "duration": "18:45"
+      },
+      {
+        "title": "Introduction to Async/Await",
+        "videoUrl": "https://www.youtube.com/embed/V_Kr9OSfDeU",
+        "duration": "22:00"
+      }
+    ]
+  },
+
+  {
+    "id": "course103",
+    "title": "React for Beginners — Zero to Hero",
+    "instructor": "Michael Smith",
+    "price": 39.99,
+    "category": "Frontend Development",
+    "tags": ["react", "hooks", "frontend"],
+    "thumbnail": "https://i.ibb.co/yBQBycn/react.jpg",
+    "description": "Start learning React.js step-by-step. Understand components, hooks, props, context API, and build real-world UI.",
+    "syllabus": [
+      "React Introduction",
+      "Components & Props",
+      "State & Hooks",
+      "React Router",
+      "Mini Projects"
+    ],
+    "lessons": [
+      {
+        "title": "React Overview",
+        "videoUrl": "https://www.youtube.com/embed/N3AkSS5hXMA",
+        "duration": "12:40"
+      },
+      {
+        "title": "Using useState & useEffect",
+        "videoUrl": "https://www.youtube.com/embed/0fYi8SGA20k",
+        "duration": "25:55"
+      }
+    ]
+  }
+]

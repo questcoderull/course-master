@@ -3,6 +3,7 @@ import RootLayout from "../layouts/RootLayouts";
 import Home from "../pages/HomePage/Home/Home";
 import Login from "../pages/login/Login";
 import CourseListing from "../pages/CourseListing/CourseListing";
+import CourseDetails from "../pages/CourseDetails/CourseDetails";
 
 export const router = createBrowserRouter([
   {
@@ -14,12 +15,16 @@ export const router = createBrowserRouter([
         Component: Home,
       },
       {
-        path: "/login",
+        path: "login",
         Component: Login,
       },
       {
-        path: "/courses",
+        path: "courses",
         Component: CourseListing,
+      },
+      {
+        path: "courses/:id",
+        element: <CourseDetails></CourseDetails>,
       },
     ],
   },
