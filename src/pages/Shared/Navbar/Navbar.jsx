@@ -1,4 +1,5 @@
 import React from "react";
+import { FaSignInAlt, FaUserPlus } from "react-icons/fa";
 import { NavLink } from "react-router";
 
 const Navbar = () => {
@@ -57,7 +58,31 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1">{navItems}</ul>
       </div>
       <div className="navbar-end">
-        <a className="btn">Button</a>
+        <div className="hidden lg:flex items-center gap-2">
+          <NavLink
+            to="/login"
+            className={({ isActive }) =>
+              `btn btn-sm flex items-center gap-2 ${
+                isActive ? "btn-primary text-white" : "btn-outline"
+              }`
+            }
+          >
+            <FaSignInAlt />
+            Login
+          </NavLink>
+
+          <NavLink
+            to="/signUP"
+            className={({ isActive }) =>
+              `btn btn-sm flex items-center gap-2 ${
+                isActive ? "btn-primary text-white" : "btn-outline"
+              }`
+            }
+          >
+            <FaUserPlus />
+            Sign Up
+          </NavLink>
+        </div>
       </div>
     </div>
   );

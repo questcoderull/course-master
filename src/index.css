@@ -30,3 +30,8 @@
 * {
   font-family: "Inter", sans-serif;
 }
+
+a.active {
+  background-color: #065482;
+  color: white;
+}
