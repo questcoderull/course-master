@@ -1,7 +1,31 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
 @import "tailwindcss";
-@plugin "daisyui";
+
+@plugin "daisyui" {
+  themes: light --default, dark;
+}
+
+@plugin "daisyui/theme" {
+  name: "light";
+  default: false;
+  --color-primary: #065482;
+  --color-secondary: #f89746;
+  --color-accent: #00cee8;
+  --color-neutral: #fff; /*card bg color*/
+  --color-info: #4b5563; /*for gray text as short description under the headlines*/
+  --color-error: #e5e7eb; /*for border*/
+}
+
+@plugin "daisyui/theme" {
+  name: "dark";
+  --color-primary: #4db6e5; /* lighter glowing blue */
+  --color-secondary: #f9a65a; /* softer orange */
+  --color-accent: #00eaff; /* neon cyan */
+  --color-neutral: #1a2933; /*for card bg*/
+  --color-info: #d1d5db;
+  --color-error: #374151; /*for border*/
+}
 
 * {
   font-family: "Inter", sans-serif;
