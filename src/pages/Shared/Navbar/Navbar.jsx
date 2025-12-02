@@ -15,10 +15,10 @@ const Navbar = () => {
       </li>
       <li className="hover:bg-primary rounded-md transition">
         <NavLink
-          to="/about"
+          to="/courses"
           className="flex items-center gap-2 px-3 py-2 rounded-md text-primary hover:text-white"
         >
-          About
+          Courses
         </NavLink>
       </li>
     </>
