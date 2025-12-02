@@ -4,6 +4,7 @@ import Home from "../pages/HomePage/Home/Home";
 import Login from "../pages/login/Login";
 import CourseListing from "../pages/CourseListing/CourseListing";
 import CourseDetails from "../pages/CourseDetails/CourseDetails";
+import Payment from "../pages/Payment/Payment";
 
 export const router = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ export const router = createBrowserRouter([
       {
         path: "courses/:id",
         element: <CourseDetails></CourseDetails>,
+      },
+      {
+        path: "payment",
+        element: <Payment></Payment>,
       },
     ],
   },

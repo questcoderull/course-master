@@ -1,4 +1,4 @@
-import { useParams } from "react-router";
+import { NavLink, useParams } from "react-router";
 import courseData from "../../assets/Data/CourseData.json";
 
 const CourseDetails = () => {
@@ -34,8 +34,9 @@ const CourseDetails = () => {
             {course.category}
           </p>
           <p className="text-xl font-bold mb-4">${course.price}</p>
-
-          <button className="btn btn-primary btn-lg">Enroll Now</button>
+          <NavLink to="/payment">
+            <button className="btn btn-primary btn-lg">Enroll Now</button>
+          </NavLink>
         </div>
       </div>
 
