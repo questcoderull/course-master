@@ -5,6 +5,7 @@ import Login from "../pages/login/Login";
 import CourseListing from "../pages/CourseListing/CourseListing";
 import CourseDetails from "../pages/CourseDetails/CourseDetails";
 import Payment from "../pages/Payment/Payment";
+import PageNotFound from "../pages/PageNotFound/PageNotFound";
 
 export const router = createBrowserRouter([
   {
@@ -32,5 +33,11 @@ export const router = createBrowserRouter([
         element: <Payment></Payment>,
       },
     ],
+  },
+
+  // page not found page
+  {
+    path: "*",
+    Component: PageNotFound,
   },
 ]);
