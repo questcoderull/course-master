@@ -6,11 +6,13 @@ import CourseListing from "../pages/CourseListing/CourseListing";
 import CourseDetails from "../pages/CourseDetails/CourseDetails";
 import Payment from "../pages/Payment/Payment";
 import PageNotFound from "../pages/PageNotFound/PageNotFound";
+import ErrorPage from "../pages/ErrorPage/ErrorPage";
 
 export const router = createBrowserRouter([
   {
     path: "/",
     Component: RootLayout,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         index: true,
