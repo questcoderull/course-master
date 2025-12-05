@@ -1,11 +1,13 @@
 import React, { use, useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-import { Link } from "react-router";
+import { Link, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../../../contexts/AuthConterxts/AuthContext";
 
 const SignUp = () => {
   const [showPassword, setShowPassword] = useState(false);
   const { createUserWithEmailPass } = use(AuthContext);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const handleRegister = (e) => {
     e.preventDefault();
@@ -22,6 +24,7 @@ const SignUp = () => {
     createUserWithEmailPass(email, password)
       .then((result) => {
         console.log(result.user);
+        navigate(`${location.state ? location.state : "/"}`);
       })
       .catch((error) => {
         console.log(error);

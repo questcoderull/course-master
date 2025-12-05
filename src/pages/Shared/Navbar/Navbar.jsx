@@ -1,8 +1,11 @@
-import React from "react";
+import React, { use } from "react";
 import { FaSignInAlt, FaUserPlus } from "react-icons/fa";
 import { NavLink } from "react-router";
+import { AuthContext } from "../../../contexts/AuthConterxts/AuthContext";
 
 const Navbar = () => {
+  const { user, logOut } = use(AuthContext);
+
   const navItems = (
     <>
       <li className="hover:bg-primary rounded-md transition">
@@ -23,6 +26,16 @@ const Navbar = () => {
       </li>
     </>
   );
+
+  const handleLogOut = () => {
+    logOut()
+      .then((result) => {
+        console.log(result);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
 
   return (
     <div className="navbar bg-base-100 shadow-sm">
@@ -52,36 +65,51 @@ const Navbar = () => {
             {navItems}
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">CourseMaster</a>
+        <a className="btn btn-ghost text-xl font-extrabold text-primary">
+          Course<span className="text-secondary">Master</span>
+        </a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{navItems}</ul>
       </div>
       <div className="navbar-end">
         <div className="hidden lg:flex items-center gap-2">
-          <NavLink
-            to="/login"
-            className={({ isActive }) =>
-              `btn btn-sm flex items-center gap-2 ${
-                isActive ? "btn-primary text-white" : "btn-outline"
-              }`
-            }
-          >
-            <FaSignInAlt />
-            Login
-          </NavLink>
+          {user ? (
+            // user logged in → show logout or profile
+            <button
+              onClick={() => handleLogOut()}
+              className="btn btn-sm btn-error"
+            >
+              Logout
+            </button>
+          ) : (
+            // user not logged in → show login + signup
+            <>
+              <NavLink
+                to="/login"
+                className={({ isActive }) =>
+                  `btn btn-sm flex items-center gap-2 ${
+                    isActive ? "btn-primary text-white" : "btn-accent"
+                  }`
+                }
+              >
+                <FaSignInAlt />
+                Login
+              </NavLink>
 
-          <NavLink
-            to="/signUP"
-            className={({ isActive }) =>
-              `btn btn-sm flex items-center gap-2 ${
-                isActive ? "btn-primary text-white" : "btn-outline"
-              }`
-            }
-          >
-            <FaUserPlus />
-            Sign Up
-          </NavLink>
+              <NavLink
+                to="/signup"
+                className={({ isActive }) =>
+                  `btn btn-sm flex items-center gap-2 ${
+                    isActive ? "btn-primary text-white" : "btn-accent"
+                  }`
+                }
+              >
+                <FaUserPlus />
+                Sign Up
+              </NavLink>
+            </>
+          )}
         </div>
       </div>
     </div>
