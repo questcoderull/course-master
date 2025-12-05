@@ -9,6 +9,7 @@ import PageNotFound from "../pages/PageNotFound/PageNotFound";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import AuthLayout from "../layouts/AuthLayout";
 import SignUp from "../pages/Authentication/SingnUp/SignUp";
+import MyCourses from "../pages/MyCourses/MyCourses";
 
 export const router = createBrowserRouter([
   {
@@ -32,6 +33,10 @@ export const router = createBrowserRouter([
       {
         path: "payment",
         element: <Payment></Payment>,
+      },
+      {
+        path: "my-courses",
+        element: <MyCourses></MyCourses>,
       },
     ],
   },

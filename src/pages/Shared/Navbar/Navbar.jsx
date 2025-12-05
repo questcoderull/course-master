@@ -8,7 +8,7 @@ const Navbar = () => {
 
   const navItems = (
     <>
-      <li className="hover:bg-primary rounded-md transition">
+      <li className="hover:bg-primary rounded-md transition m-0.5">
         <NavLink
           to="/"
           className="flex items-center gap-2 px-3 py-2 rounded-md text-primary hover:text-white"
@@ -16,12 +16,20 @@ const Navbar = () => {
           Home
         </NavLink>
       </li>
-      <li className="hover:bg-primary rounded-md transition">
+      <li className="hover:bg-primary rounded-md transition m-0.5">
         <NavLink
           to="/courses"
           className="flex items-center gap-2 px-3 py-2 rounded-md text-primary hover:text-white"
         >
           Courses
+        </NavLink>
+      </li>
+      <li className="hover:bg-primary rounded-md transition m-0.5">
+        <NavLink
+          to="/my-courses"
+          className="flex items-center gap-2 px-3 py-2 rounded-md text-primary hover:text-white"
+        >
+          My courses
         </NavLink>
       </li>
     </>
